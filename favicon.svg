@@ -1,0 +1,13 @@
+<!--
+  Zinhār favicon — distilled from ic_launcher_source.svg.
+  Optimized for small sizes (16/32 px) by slightly enlarging the iris
+  so the gold accent stays readable when the favicon is shrunk in a
+  browser tab. Same palette C1, same arch silhouette as the launcher.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="14" fill="#2D6A4F"/>
+  <path d="M 18 52 L 18 32 Q 18 15 32 13 Q 46 15 46 32 L 46 52 Z" fill="#F5E9D3"/>
+  <ellipse cx="32" cy="33" rx="8.5" ry="5" fill="#2D6A4F"/>
+  <circle cx="32" cy="33" r="3.4" fill="#D4A574"/>
+  <circle cx="32" cy="33" r="1.4" fill="#2D6A4F"/>
+</svg>
