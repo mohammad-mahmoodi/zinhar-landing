@@ -1,0 +1,12 @@
+# Jekyll build output (GitHub Pages rebuilds this server-side)
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# Bundler / RubyGems local install
+vendor/
+.bundle/
+Gemfile.lock
+
+# macOS
+.DS_Store

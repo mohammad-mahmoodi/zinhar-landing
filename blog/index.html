@@ -1,0 +1,41 @@
+---
+layout: default
+title: بلاگ — آموزش امنیت اندروید و شناسایی فیشینگ
+description: مقالات تخصصی دربارهٔ شناسایی پیامک جعلی، کلاهبرداری در پیام‌رسان‌ها، تماس‌های فیشینگ و امنیت گوشی اندروید.
+permalink: /blog/
+---
+
+<section class="blog-list">
+  <div class="container">
+
+    <header class="blog-list-head">
+      <span class="blog-list-kicker">بلاگ زنهار</span>
+      <h1 class="blog-list-title">آموزش‌های امنیت برای کاربر ایرانی.</h1>
+      <p class="blog-list-lead">
+        پشت هر کلاهبرداری، یک الگو هست. در این بلاگ، الگوهای رایج فیشینگ و هک در ایران را معرفی می‌کنیم —
+        به زبان ساده، فارغ از هیجان.
+      </p>
+    </header>
+
+    {%- if site.posts.size > 0 -%}
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+          <li class="post-card">
+            <a href="{{ post.url | relative_url }}">
+              <time datetime="{{ post.date | date_to_xmlschema }}">
+                {{- post.date_persian | default: post.date | date: "%Y-%m-%d" -}}
+              </time>
+              <h2>{{ post.title }}</h2>
+              <p>{{ post.description | default: post.excerpt | strip_html | truncate: 160 }}</p>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    {%- else -%}
+      <div class="post-empty">
+        به‌زودی… اولین مقاله‌ها در راه‌اند.
+      </div>
+    {%- endif -%}
+
+  </div>
+</section>

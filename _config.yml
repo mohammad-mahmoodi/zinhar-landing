@@ -1,0 +1,64 @@
+title: زنهار
+tagline: آنتی‌ویروس ضد فیشینگ و هک برای اندروید
+description: >-
+  آنتی‌ویروس فارسی برای اندروید — محافظ پیامک، تلگرام، واتساپ، بله، روبیکا،
+  ایتا، سروش و تماس‌ها در برابر فیشینگ و کلاهبرداری. ۱۰۰٪ آفلاین.
+url: "https://zinharapp.ir"
+baseurl: ""
+
+lang: fa-IR
+locale: fa_IR
+timezone: Asia/Tehran
+
+author:
+  name: زنهار
+  url: https://zinharapp.ir
+
+logo: /logo-512.png
+
+twitter:
+  card: summary_large_image
+
+social:
+  name: زنهار
+  links:
+    - https://cafebazaar.ir/app/ir.zinhar.app
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+permalink: /blog/:slug/
+
+# Allow scheduled posts to publish on/after their date
+future: true
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      image: /og-image.png
+
+feed:
+  path: /feed.xml
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md
+  - .jekyll-cache
+
+keep_files:
+  - favicon.svg
+  - favicon-16.png
+  - favicon-32.png
+  - apple-touch-icon.png
+  - logo-512.png
+  - og-image.png
+  - site.webmanifest
+  - CNAME
+  - robots.txt

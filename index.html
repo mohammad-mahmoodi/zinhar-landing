@@ -243,6 +243,21 @@
     .brand-name {
       font-size: 22px; font-weight: 700; letter-spacing: -0.01em;
     }
+    .topbar-actions {
+      display: flex; align-items: center; gap: 22px;
+    }
+    .topbar-link {
+      font-size: 15px; font-weight: 600;
+      color: var(--primary-darker);
+      text-decoration: none;
+      padding: 6px 4px;
+      border-bottom: 2px solid transparent;
+      transition: color .15s ease, border-color .15s ease;
+    }
+    .topbar-link:hover { color: var(--primary); border-bottom-color: var(--gold); }
+    @media (max-width: 480px) {
+      .topbar-actions { gap: 14px; }
+    }
 
     /* ===== Buttons ===== */
     .btn {
@@ -658,6 +673,12 @@
       color: var(--primary-darker); font-weight: 600;
     }
     .footer-brand .brand-mark { width: 26px; height: 26px; border-radius: 8px; box-shadow: none; }
+    .footer-links { display: flex; gap: 18px; align-items: center; }
+    .footer-links a {
+      color: var(--muted); text-decoration: none;
+      transition: color .15s ease;
+    }
+    .footer-links a:hover { color: var(--primary); }
 
     /* ===== Reveal animation ===== */
     .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
@@ -693,12 +714,15 @@
         <svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true"><use href="#brand-icon"/></svg>
         <span class="brand-name">زنهار</span>
       </a>
-      <a class="btn btn-primary" href="https://cafebazaar.ir/app/ir.zinhar.app" rel="noopener" aria-label="دانلود اپلیکیشن زنهار از کافه‌بازار">
-        <svg class="btn-bazaar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>
-        </svg>
-        دانلود از کافه‌بازار
-      </a>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="/blog/">بلاگ</a>
+        <a class="btn btn-primary" href="https://cafebazaar.ir/app/ir.zinhar.app" rel="noopener" aria-label="دانلود اپلیکیشن زنهار از کافه‌بازار">
+          <svg class="btn-bazaar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>
+          </svg>
+          دانلود از کافه‌بازار
+        </a>
+      </div>
     </nav>
   </header>
 
@@ -1108,6 +1132,11 @@
       <div class="footer-brand">
         <svg class="brand-mark" viewBox="0 0 108 108" aria-hidden="true"><use href="#brand-icon"/></svg>
         زنهار · آنتی‌ویروس ضد فیشینگ و هک برای اندروید
+      </div>
+      <div class="footer-links">
+        <a href="/">خانه</a>
+        <a href="/blog/">بلاگ</a>
+        <a href="/feed.xml">RSS</a>
       </div>
       <div>© ۱۴۰۵ زنهار. ساخته‌شده در ایران، برای ایران.</div>
     </div>

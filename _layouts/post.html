@@ -1,0 +1,55 @@
+---
+layout: default
+---
+<article class="post">
+  <div class="container post-container">
+
+    <header class="post-header">
+      <a class="post-back" href="/blog/" aria-label="بازگشت به فهرست بلاگ">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="transform: scaleX(-1)"><polyline points="15 18 9 12 15 6"/></svg>
+        بازگشت به بلاگ
+      </a>
+
+      {%- if page.category -%}
+        <span class="eyebrow">{{ page.category }}</span>
+      {%- else -%}
+        <span class="eyebrow">آموزش امنیت</span>
+      {%- endif -%}
+
+      <h1 class="post-title">{{ page.title }}</h1>
+
+      {%- if page.description -%}
+        <p class="post-lead">{{ page.description }}</p>
+      {%- endif -%}
+
+      <div class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{- page.date_persian | default: page.date | date: "%Y-%m-%d" -}}
+        </time>
+        {%- if page.reading_time -%}
+          <span aria-hidden="true">·</span>
+          <span>{{ page.reading_time }} دقیقه مطالعه</span>
+        {%- endif -%}
+      </div>
+    </header>
+
+    <div class="post-content">
+      {{ content }}
+    </div>
+
+    <aside class="post-cta">
+      <div class="post-cta-arch" aria-hidden="true">
+        <svg viewBox="0 0 108 108" width="56" height="56"><use href="#brand-icon"/></svg>
+      </div>
+      <h3>زنهار را امتحان کنید</h3>
+      <p>آنتی‌ویروس فارسی برای اندروید — رایگان، سبک، ۱۰۰٪ آفلاین.</p>
+      <a class="btn btn-primary" href="https://cafebazaar.ir/app/ir.zinhar.app" rel="noopener">
+        <svg class="btn-bazaar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/>
+        </svg>
+        دریافت از کافه‌بازار
+      </a>
+    </aside>
+
+  </div>
+</article>
