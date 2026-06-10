@@ -108,6 +108,61 @@ main {
 }
 .btn-bazaar-icon { width: 22px; height: 22px; flex-shrink: 0; }
 
+/* ===== Store badge buttons ===== */
+.store-btns {
+  display: flex; gap: 12px; flex-wrap: wrap; align-items: center;
+}
+.btn-store {
+  display: inline-flex; align-items: center; gap: 11px;
+  padding: 13px 22px; border-radius: 14px;
+  font-family: inherit; text-decoration: none;
+  transition: transform .15s ease, box-shadow .25s ease;
+}
+.btn-store:hover { transform: translateY(-2px); }
+.btn-store-logo {
+  width: 42px; height: 42px;
+  border-radius: 11px;
+  flex-shrink: 0;
+  object-fit: cover;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.22);
+}
+.btn-store-text { display: flex; flex-direction: column; line-height: 1.2; text-align: right; }
+.btn-store-sub { font-size: 11px; font-weight: 400; color: rgba(245,233,211,0.62); }
+.btn-store-name { font-size: 16px; font-weight: 700; color: var(--cream); }
+.btn-store-bazaar, .btn-store-myket {
+  background: var(--primary-darker);
+  border: 1.5px solid rgba(245,233,211,0.13);
+  box-shadow: 0 4px 14px rgba(20, 39, 31, 0.22), inset 0 1px 0 rgba(245,233,211,0.05);
+}
+.btn-store-bazaar:hover, .btn-store-myket:hover {
+  background: var(--ink);
+  border-color: rgba(245,233,211,0.22);
+  box-shadow: 0 8px 24px rgba(20, 39, 31, 0.34);
+}
+
+/* ===== Topbar compact store buttons ===== */
+.topbar-store-btns { display: flex; gap: 8px; align-items: center; }
+.btn-store-compact {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 14px; border-radius: 999px;
+  font-family: inherit; font-size: 14px; font-weight: 600;
+  text-decoration: none; white-space: nowrap;
+  transition: opacity .15s ease, transform .15s ease;
+}
+.btn-store-compact:hover { opacity: 0.88; transform: translateY(-1px); }
+.btn-store-compact-bazaar { background: var(--primary); color: var(--cream); }
+.btn-store-compact-myket {
+  background: transparent; color: var(--primary-darker);
+  border: 1.5px solid var(--line);
+}
+.btn-store-compact-myket:hover { border-color: var(--primary); }
+@media (max-width: 520px) {
+  .btn-store-compact-name { display: none; }
+  .btn-store-compact { padding: 8px 10px; }
+}
+/* post-cta override: remove old single-btn padding override for store badges */
+.post-cta .btn-store { padding: 13px 22px; font-size: 16px; }
+
 /* ===== Eyebrow chip ===== */
 .eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
